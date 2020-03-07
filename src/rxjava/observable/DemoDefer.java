@@ -1,4 +1,4 @@
-package rxjava;
+package rxjava.observable;
 
 import io.reactivex.Observable;
 

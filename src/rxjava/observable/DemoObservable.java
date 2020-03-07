@@ -1,5 +1,6 @@
-package rxjava;
+package rxjava.observable;
 
+import io.reactivex.Completable;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -63,6 +64,10 @@ public class DemoObservable {
         observable.subscribe(System.out::println);
     }
 
+    public static void completableObservable(){
+        Completable completable = Completable.fromAction(System.out::println);
+        completable.subscribe();
+    }
     public static void main(String... s) throws InterruptedException {
         //neverObservable();
         //errorObservable();
@@ -70,7 +75,8 @@ public class DemoObservable {
         //fromListToObservable();
         //intervalInObservable();
         //Thread.sleep(10000);
-        rangeObservable(10, 20);
+       // rangeObservable(10, 20);
+        completableObservable();
     }
 
 }
